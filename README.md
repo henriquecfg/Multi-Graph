@@ -1,17 +1,25 @@
-Projeto que visa encontrar o melhor caminho entre duas cidades
+# Find the best way between two cities
 
-	Entre duas cidades pode haver mais de um meio de locomoção, como por exemplo:
+## Multi-Graph
 
-	Rodovia
-	Trem
-	Avião
+Between two cities there may be more than one way of locomotion
 
-	Neste código utilizei apenas Rodovias e Estradas, isso transforma um grafo simples em um multi-grafo.
-	
-	Neste projeto é possivel utilizar mais de um mecanismo de busca dentro do grafo, sendo eles:
+-Highway
+-Train
+-Airplane
+-Road
 
-	Menor Custo
-	Menor Distancia
-	Menor Tempo
+![Alt Text](https://github.com/henriquecfg/Multi-Graph/raw/master/graph.jpg)
 
-	Para isso foi utilizado o design pattern strategy.
+
+And each one has different advantages
+
+-Time spent traveling
+-Money Cost
+-Nearest
+
+
+## Implementation
+
+So these 3 options can be the "cost" of the graph
+To differentiate the 3 options the design pattern strategy was used, and so with the dijkstra algorithm the graph can be easily solved generating 3 different solutions, one for each type of cost.
